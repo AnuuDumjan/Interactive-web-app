@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - TaskFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-tasks"></i>
+                <span>TaskFlow</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="tasks.html" class="nav-link active">
+                        <i class="fas fa-list-check"></i>
+                        <span>Tasks</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="statistics.html" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Stats</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Gallery</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Task Manager</h1>
+                <p class="page-subtitle">Create, organize, and complete your tasks</p>
+            </div>
+
+            <div class="task-form-container">
+                <form id="taskForm" class="task-form">
+                    <div class="form-group">
+                        <label for="taskTitle">Task Title *</label>
+                        <input type="text" id="taskTitle" name="taskTitle" required>
+                        <span class="error-message" id="titleError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="taskDescription">Description</label>
+                        <textarea id="taskDescription" name="taskDescription" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="taskCategory">Category *</label>
+                            <select id="taskCategory" name="taskCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="work">Work</option>
+                                <option value="personal">Personal</option>
+                                <option value="health">Health</option>
+                                <option value="learning">Learning</option>
+                                <option value="shopping">Shopping</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message" id="categoryError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="taskPriority">Priority</label>
+                            <select id="taskPriority" name="taskPriority">
+                                <option value="low">Low</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="taskDueDate">Due Date</label>
+                        <input type="date" id="taskDueDate" name="taskDueDate">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Add Task
+                        </button>
+                        <button type="button" id="cancelEdit" class="btn btn-secondary" style="display: none;">
+                            <i class="fas fa-times"></i>
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="tasks-section">
+                <div class="tasks-header">
+                    <h2>Your Tasks</h2>
+                    <div class="task-filters">
+                        <select id="filterCategory">
+                            <option value="all">All Categories</option>
+                            <option value="work">Work</option>
+                            <option value="personal">Personal</option>
+                            <option value="health">Health</option>
+                            <option value="learning">Learning</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <select id="filterStatus">
+                            <option value="all">All Status</option>
+                            <option value="pending">Pending</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="tasksList" class="tasks-list">
+                    <div class="empty-state">
+                        <i class="fas fa-clipboard-list"></i>
+                        <p>No tasks found. Create your first task above!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy;2025 TaskFlow. Made for your success ❤️ and productivity.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/tasks.js"></script>
+    <script>
+  console.log("Tasks page loaded");
+  document.getElementById('taskForm').addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Form submitted!');
+  });
+</script>
+
+</body>
+</html>

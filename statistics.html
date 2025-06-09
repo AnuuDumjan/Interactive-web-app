@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - TaskFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-tasks"></i>
+                <span>TaskFlow</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="tasks.html" class="nav-link">
+                        <i class="fas fa-list-check"></i>
+                        <span>Tasks</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="statistics.html" class="nav-link active">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Stats</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Gallery</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Productivity Statistics</h1>
+                <p class="page-subtitle">Track your progress and achievements</p>
+            </div>
+
+            <div class="stats-overview">
+                <div class="stat-card large">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" id="completionRate">0%</div>
+                        <div class="stat-label">Completion Rate</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card large">
+                    <div class="stat-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" id="currentStreak">0</div>
+                        <div class="stat-label">Day Streak</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card large">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" id="tasksThisWeek">0</div>
+                        <div class="stat-label">This Week</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-section">
+                <div class="chart-container">
+                    <h3>Tasks by Category</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="categoryChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Priority Distribution</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="priorityChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detailed-stats">
+                <h3>Detailed Breakdown</h3>
+                <div class="stats-table-container">
+                    <table class="stats-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Total</th>
+                                <th>Completed</th>
+                                <th>Pending</th>
+                                <th>Completion %</th>
+                            </tr>
+                        </thead>
+                        <tbody id="statsTableBody">
+                            <tr>
+                                <td colspan="5" class="empty-row">No data available</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="achievements">
+                <h3>Achievements</h3>
+                <div class="achievements-grid" id="achievementsList">
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>First Task</h4>
+                            <p>Complete your first task</p>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>On Fire</h4>
+                            <p>Complete 5 tasks in a day</p>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Productive Week</h4>
+                            <p>Complete 20 tasks in a week</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TaskFlow. Made for your success ❤️ and productivity.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/statistics.js"></script>
+</body>
+</html>

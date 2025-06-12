@@ -1000,6 +1000,8 @@ body {
     text-align: center;
     padding: var(--spacing-8) 0;
     margin-top: auto;
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+
 }
 
 

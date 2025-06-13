@@ -9,11 +9,11 @@
     
     --primary-color: #d534b2;
     --primary-dark: #d1a0a0;
-    --primary-light: #a28897;
+    --primary-light: #a08f99;
     --secondary-color: #10b981;
     --secondary-dark: #059669;
-    --accent-color: #f59e0b;
-    --accent-dark: #d97706;
+    --accent-color: #dbbf8f;
+    --accent-dark: #56493a;
     
     
     --success-color: #10b981;
@@ -30,9 +30,9 @@
     --gray-400: #9ca3af;
     --gray-500: #6b7280;
     --gray-600: #4b5563;
-    --gray-700: #374151;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
+    --gray-700: #616873;
+    --gray-800: #4f5965;
+    --gray-900: #262c39;
     
     
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

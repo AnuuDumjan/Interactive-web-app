@@ -95,18 +95,19 @@
   </footer>
 
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+window.addEventListener('DOMContentLoaded', () => {
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-      const total = tasks.length;
-      const completed = tasks.filter(task => task.isCompleted).length;
-      const pending = total - completed;
+    document.getElementById('totalTasks').textContent = tasks.length;
 
-      document.getElementById('totalTasks').textContent = total;
-      document.getElementById('completedTasks').textContent = completed;
-      document.getElementById('pendingTasks').textContent = pending;
-    });
-  </script>
+    const completed = tasks.filter(task => task.completed).length;
+    const pending = tasks.length - completed;
+
+    document.getElementById('completedTasks').textContent = completed;
+    document.getElementById('pendingTasks').textContent = pending;
+});
+</script>
+
   
 </body>
 </html>

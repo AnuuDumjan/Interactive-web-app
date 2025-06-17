@@ -154,6 +154,34 @@
             <p>&copy; 2024 TaskFlow. Built with ❤️ for productivity.</p>
         </div>
     </footer>
+    <script>
+  document.getElementById('taskForm').addEventListener('submit', e => {
+    e.preventDefault();
+
+    const title = document.getElementById('taskTitle').value.trim();
+    const category = document.getElementById('taskCategory').value;
+
+    if (!title || !category) {
+        alert('Please fill in all required fields');
+        return;
+    }
+
+    const task = {
+        title: title,
+        category: category,
+        completed: false,
+        createdAt: new Date().toISOString()
+    };
+
+    const existingTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    existingTasks.push(task);
+    localStorage.setItem('tasks', JSON.stringify(existingTasks));
+
+    alert('Task added successfully!');
+    e.target.reset(); 
+  });
+</script>
+
 
     
 </body>

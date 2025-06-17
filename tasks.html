@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prodify — Your Tasks</title>
+    <title>Tasks - TaskFlow</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,7 +13,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <i class="fas fa-tasks"></i>
-                <span>Your Tasks</span>
+                <span>TaskFlow</span>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -58,7 +58,7 @@
     <main class="main-content">
         <div class="container">
             <div class="page-header">
-                <h1 class="page-title">Prodify Task Tracker</h1>
+                <h1 class="page-title">Task Manager</h1>
                 <p class="page-subtitle">Create, organize, and complete your tasks</p>
             </div>
 
@@ -142,7 +142,7 @@
                 <div id="tasksList" class="tasks-list">
                     <div class="empty-state">
                         <i class="fas fa-clipboard-list"></i>
-                        <p>Start tracking by creating your first task above!</p>
+                        <p>No tasks found. Create your first task above!</p>
                     </div>
                 </div>
             </div>
@@ -151,16 +151,11 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy;2025 Prodify. Made for your success ❤️ and productivity.g</p>
+            <p>&copy; 2024 TaskFlow. Built with ❤️ for productivity.</p>
         </div>
     </footer>
-    <script>
-  console.log("Tasks page loaded");
-  document.getElementById('taskForm').addEventListener('submit', e => {
-    e.preventDefault();
-    alert('Form submitted!');
-  });
-</script>
 
+    <script src="js/main.js"></script>
+    <script src="js/tasks.js"></script>
 </body>
 </html>

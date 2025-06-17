@@ -1,100 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prodify</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prodify</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-tasks"></i>
-                <span>Prodify</span>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link active">
-                        <i class="fas fa-home"></i>
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="tasks.html" class="nav-link">
-                        <i class="fas fa-list-check"></i>
-                        <span>Task</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="statistics.html" class="nav-link">
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Stats</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="gallery.html" class="nav-link">
-                        <i class="fas fa-th-large"></i>
-                        <span>Gallery</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">
-                        <i class="fas fa-envelope"></i>
-                        <span>Contact</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-tasks"></i>
+        <span>Prodify</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="tasks.html" class="nav-link">
+            <i class="fas fa-list-check"></i>
+            <span>Task</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="statistics.html" class="nav-link">
+            <i class="fas fa-chart-bar"></i>
+            <span>Stats</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link">
+            <i class="fas fa-th-large"></i>
+            <span>Gallery</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Welcome to Prodify</h1>
+        <p class="hero-subtitle">Your personal productivity companion</p>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-number" id="totalTasks">0</div>
+            <div class="stat-label">Total Tasks</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="completedTasks">0</div>
+            <div class="stat-label">Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="pendingTasks">0</div>
+            <div class="stat-label">Pending</div>
+          </div>
         </div>
-    </nav>
-
-    <main class="main-content">
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Welcome to Prodify</h1>
-                <p class="hero-subtitle">Your personal productivity companion</p>
-                <div class="hero-stats">
-                    <div class="stat-card">
-                        <div class="stat-number" id="totalTasks">0</div>
-                        <div class="stat-label">Total Tasks</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="completedTasks">0</div>
-                        <div class="stat-label">Completed</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="pendingTasks">0</div>
-                        <div class="stat-label">Pending</div>
-                    </div>
-                </div>
-                <div class="hero-actions">
-                    <a href="tasks.html" class="btn btn-primary">
-                        <i class="fas fa-plus"></i>
-                        Add New Task
-                    </a>
-                    <a href="gallery.html" class="btn btn-secondary">
-                        <i class="fas fa-eye"></i>
-                        View All Tasks
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Prodify. Made for your success ❤️ and productivity.</p>
+        <div class="hero-actions">
+          <a href="tasks.html" class="btn btn-primary">
+            <i class="fas fa-plus"></i>
+            Add New Task
+          </a>
+          <a href="gallery.html" class="btn btn-secondary">
+            <i class="fas fa-eye"></i>
+            View All Tasks
+          </a>
         </div>
-    </footer>
->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Prodify. Made for your success ❤️ and productivity.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+      const total = tasks.length;
+      const completed = tasks.filter(task => task.isCompleted).length;
+      const pending = total - completed;
+
+      document.getElementById('totalTasks').textContent = total;
+      document.getElementById('completedTasks').textContent = completed;
+      document.getElementById('pendingTasks').textContent = pending;
+    });
+  </script>
 </body>
 </html>
